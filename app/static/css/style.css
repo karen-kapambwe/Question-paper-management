@@ -1,0 +1,461 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*background: #cca353*/
+
+.main-head {
+  background: #232a34;
+  position: sticky;
+  color: white;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  min-height: 6vh;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.logo-img {
+  flex: 1 1 90rem;
+}
+.logo-img h4 a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-family: "Poppins", sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 30rem;
+  font-family: "Poppins", sans-serif;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a button {
+  padding: 0.7rem 1.3rem;
+  background: #4c6e97;
+  border: none;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+button:hover {
+  background: #27394e;
+  font-size: 1.5rem;
+}
+
+.main {
+  min-height: 90vh;
+  background: linear-gradient(rgba(104, 104, 167, 0.7), transparent),
+    url(../img/unza-brain1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h3 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* #53565a*/
+
+.main span a button {
+  padding: 0.7rem 5rem;
+  background: #4c6e97;
+  border: none;
+  border-radius: 15px;
+  margin-top: 3rem;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+/*courses list*/
+.course-list {
+  min-height: 100vh;
+  text-align: center;
+  padding: 6rem;
+  background: url(../img/course.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+.course-list h1 {
+  padding: 2rem;
+  font-size: 2rem;
+  color: #4c6e97;
+  font-size: 2.6rem;
+  margin-top: 8rem;
+}
+.course-btn button {
+  padding: 0.4rem 3rem;
+  background: #4c6e97;
+  border: none;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+.table {
+  color: #4c6e97;
+  font-size: 1.5rem;
+}
+
+/*Register and Login section*/
+
+.content-section {
+  width: 70%;
+  min-height: 100vh;
+  margin: auto;
+  font-size: 1.7rem;
+  margin-top: 5rem;
+}
+
+.btn {
+  padding: 0.3rem 4rem;
+  width: 20%;
+  background: #4c6e97;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.alert {
+  text-align: center;
+}
+
+/*Welcome-info section*/
+.welcome-info {
+  min-height: 100vh;
+  background: linear-gradient(rgba(104, 104, 167, 0.7), transparent),
+    url(../img/unza-brain1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.message-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  color: white;
+  width: 90%;
+  margin: auto;
+}
+.message-section h3 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.message-section .infor-head {
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-top: 8rem;
+  font-size: 2rem;
+}
+
+.btn-course {
+  align-items: center;
+}
+
+.btn-course a button {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  background: #4c6e97;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.btn-question a button {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  background: #4c6e97;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn-find-courses a button {
+  padding: 1rem;
+  margin-right: 3.2rem;
+  background: #4c6e97;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn-find-questions a button {
+  padding: 1rem;
+  margin-right: 2rem;
+  background: #4c6e97;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.article-div {
+  margin-top: 3rem;
+}
+
+.img-section img {
+  height: 10rem;
+}
+
+/*Course Section*/
+.course {
+  min-height: 100vh;
+  background: linear-gradient(rgba(104, 104, 167, 0.7), transparent),
+    url(../img/unza-brain1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  width: 90%;
+  color: white;
+  border-radius: 20px;
+}
+
+.form-wrapper label {
+  margin: 1rem 3rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.course-form input {
+  margin-left: -1rem;
+}
+
+.course-form label {
+  margin-left: 5rem;
+}
+
+.class-form select {
+  margin-right: 3rem;
+  margin-top: 1rem;
+  color: blue;
+  font-size: 1.3rem;
+}
+
+.form-wrapper input,
+.form-wrapper select {
+  padding: 1rem 2rem;
+  border-radius: 20px;
+}
+.form-wrapper button {
+  padding: 1.2rem;
+  width: 30%;
+  background: #4c6e97;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 2rem;
+  margin-left: 10rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Footer Section */
+
+footer {
+  color: white;
+  background: rgb(41, 71, 107);
+}
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 6vh;
+  flex-wrap: wrap;
+}
+
+footer h5 {
+  flex: 1 1 40rem;
+}
+
+footer ul {
+  display: flex;
+  list-style: none;
+  flex: 1 1 30rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:focus {
+  background: #2c3f57;
+  outline-style: solid;
+}
+
+/*About Section*/
+
+.about {
+  min-height: 100vh;
+  text-align: center;
+  padding: 6rem;
+  background: linear-gradient(rgba(104, 104, 167, 0.7), transparent),
+    url(../img/unza-brain1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+.about h1 {
+  padding: 2rem;
+  font-size: 2rem;
+  margin-top: 8rem;
+}
+
+.about h3 {
+  font-size: 1.5rem;
+}
+
+.about span a button {
+  padding: 0.7rem 5rem;
+  background: #4c6e97;
+  border: none;
+  border-radius: 15px;
+  margin-top: 3rem;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 1248px) {
+  nav {
+    text-align: center;
+  }
+  .logo-img {
+    padding: 2rem;
+  }
+  nav ul li a button {
+    padding: 0.5rem 1rem;
+    background: #4c6e97;
+    border: none;
+    border-radius: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+  }
+  .landing-head {
+    text-align: center;
+  }
+  footer {
+    text-align: center;
+  }
+  footer h5 {
+    padding-bottom: 2rem;
+  }
+}
+
+/*question paper*/
+.container {
+  min-height: 100vh;
+}
+.container h2 {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  dody {
+    font-size: 62.5%;
+  }
+}
+
+.preview {
+  min-height: 100vh;
+  background: linear-gradient(rgba(219, 219, 224, 0.7), transparent),
+    url(../img/preview-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preview-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.question-wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  font-size: 2rem;
+}
+
+.review a {
+  text-decoration: none;
+  font-size: 2rem;
+}

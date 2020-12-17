@@ -1,0 +1,38 @@
+<!--Extend layout.html-->
+{% extends 'layout.html' %}
+
+<!--css block-->
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+<!--Title Block-->
+{% block title %}
+    <title>About</title>
+{% endblock %}
+
+<!--Nav block-->
+{% block nav %}
+<nav>
+    <div class="logo-img">
+        <h4><a href="{{ url_for('index') }}">Question Paper Manament System</a></h4>
+    </div>
+    <ul>
+        {% if current_user.is_authenticated %}
+             <li><a href="{{ url_for('welcome') }}"><button>Welcome</button></a></li>
+             <li><a href="{{ url_for('logout') }}"><button>Logout</button></a></li>
+        {% else %}
+             <li><a href="{{ url_for('about') }}">About</a></li>
+             <li><a href="{{ url_for('login') }}"><button>Sign In</button></a></li>
+        {% endif %}
+        </ul>
+    </nav>
+{% endblock %}
+
+<!--Main-section bloack-->
+{% block main_section %}
+    <section class="about">
+        <h1>Question Paper Management Systen</h1>
+        <h3>Question Paper Mangement systems helps Faculty Members to set exam question papers <br> supper fast and It reduces time for reviews</h3>
+        <span><a href="/register"><button>Check It Out</button></a></span>
+    </section>
+{% endblock %}

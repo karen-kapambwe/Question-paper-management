@@ -1,0 +1,111 @@
+<!--Extend layout.html-->
+{% extends 'layout.html' %}
+
+
+
+
+
+{% block bootstrap %} 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+{% endblock %}
+{% block title %}
+<title>Assurance Board</title>
+{% endblock %}
+
+
+<!--css block-->
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+<!--Nav block-->
+{% block nav %}
+<nav>
+    <div class="logo-img">
+        <h4><a href="{{ url_for('index') }}">Question Paper Manament System</a></h4>
+    </div>
+    <ul>
+        {% if current_user.is_authenticated %}
+             <li><a href="{{ url_for('coordinator') }}"><button>Notifications</button></a></li>
+             <li><a href="{{ url_for('logout') }}"><button>Logout</button></a></li>
+        {% else %}
+             <li><a href="{{ url_for('about') }}">About</a></li>
+             <li><a href="{{ url_for('login') }}"><button>Sign In</button></a></li>
+        {% endif %}
+        </ul>
+    </nav>
+{% endblock %}
+
+<!--Main-section bloack-->
+{% block main_section %}
+    <div class="course-list">
+        <h1 class="course-head">Moderation Board List Of Courses</h1>        
+         <table class="table">
+             <thead>
+                 <tr>
+                   
+                     <th scope="col">Course Name</th>
+                     <th scope="col">New Message</th>
+                     
+                     <th scope="col">View Exam</th>
+                     <th scope="col">status</th>
+                 </tr>
+             </thead>
+             {% for message in messages %}
+             <tbody>
+                 <tr>
+                     <th><h3>{{ courses }}</h3></th>
+                     <th><h3>{{ message.message}}</h3></th>
+                    
+                     <th><a class="course-btn" href="{{ url_for('moderator_review_view') }}"><button >View Questions Paper</button></a></th>
+                     
+                     <th><h3>{{ question.approved }}</h3></th>
+                     
+                 </tr>
+             </tbody>
+             {% endfor %}
+         </table>
+         <hr>
+    </div>
+
+    <div class="content-section">
+        <form action="" method="post">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <h3 class="border-bottom mb-4">
+                  send the paper to the coordinator for approval
+                </h3>
+              
+                <div class="form-group">
+                    {{ form.message.label(class='form-control-label') }}
+                     
+                    {% if form.message.errors %}
+                        {{ form.message(class='form-control form-control-lg is-invalid') }}
+                        <div class="invalid-feedback">
+                            {% for error in form.message.errors %}
+                            <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                        {% else %}
+                        {{ form.message(class='form-control form-control-lg') }}
+                    {% endif %}
+                </div>
+    
+                <select class="form-select" name="name" class="form-control form-control-lg" aria-label="Default select example">
+                    {% for user in users %}
+                    <option value='{{ user.username }}'>{{ user.username }}</option>
+                    {% endfor %}
+                  </select>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class='btn btn-outline-info') }}
+            </div>
+        </form>
+      
+    </div>
+
+ 
+
+
+
+{% endblock %}}
